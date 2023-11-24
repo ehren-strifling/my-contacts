@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url(./reset.css);
+@import url(./contact.css);
+
+:root {
+  --app-background-color: #202026;
+  --app-font-color: #ffffff;
+  --app-input-font-color: #ffffff;
+  --app-input-color: #7070a0;
+  --app-input-border: #707090;
+  --app-input-border-selected: #9090ff;
+
+	--app-button-color: #00b000;
+	--app-button-font-color: #ffffff;
+	--app-button-border-selected: #ffffff;
+}
+
+.container {
+  width: min(1080px, 100% - 30px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+  align-items: center;  
+}
+
+body {
+	background-color: var(--app-background-color);
+	min-height: 100vh;
+	color: var(--app-font-color);
+	display: flex;
+  flex-direction: column;
+}
+
+
+header {
+	text-align: center;
+	padding-top:60px; /* I do not know why I need to use padding here... Margin causes the entire body to move downwards*/
+}
+
+.contact-menu {
+	margin-top: 4px;
+	width: 600px;
+	margin-inline: auto;
+}
+
+.contact-menu .contact-info {
+	width: 485px; /* Why exactly 485px? Well, I have no idea where the 5 missing pixels went. */
+	height:40px;
+	background-color: var(--app-input-color);
+	color: var(--app-input-font-color);
+	border: 1px solid var(--app-input-border);
+	border-radius: 5px;
+
+	font-size:18px;
+	padding-left:2px;
+}
+
+.contact-menu .contact-info:focus {
+	border-color: var(--app-input-border-selected);
+}
+
+.contact-menu .contact-info::placeholder { /* Needed or else the placeholder blends in with the background. */
+	color: #b0b0b0;
+}
+
+.contact-menu .contact-add {
+	width: 100px;
+	height:40px;
+	margin-left:10px;
+	border: 1px solid #00000000;
+	border-radius: 6px;
+	background-color: var(--app-button-color);
+	color: var(--app-button-font-color);
+
+	font-size:18px;
+	cursor:pointer;
+}
+
+.contact-menu .contact-add:hover {
+	border-color: var(--app-button-border-selected)
+}
+
+.contact-menu .message {
+	margin-top: 4px;
+	padding-left: 2px;
+	color: #00ff00;
+}
+
+.contact-menu .message.error {
+	color: #ff0000;
+}
+
+.contacts {
+	margin-top: 20px;;
+	width: min(1080px, 100% - 30px);
+  margin-inline: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	margin-bottom: 40px;
+}
+
+footer {
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 32px;
+	font-size: 16px;
+}
+
+.count {
+	color: #00ff00;
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.contact-block {
+	width: calc((100% - 40px) / 3);
+	background-color: #4040A0;
+
+	border: 1px solid #00000000;
+	border-radius:10px;
+	padding: 6px;
+}
+
+.contact-block p {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	overflow-wrap: break-word;
+}
+
+.contact-block:hover {
+	border-color: #ff0000;
+}
